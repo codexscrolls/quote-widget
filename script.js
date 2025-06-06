@@ -1,4 +1,6 @@
 async function fetchQuote() {
+  const box = document.getElementById("quote-box");
+  box.classList.remove("loaded");
   const res = await fetch("quotes.json");
   const data = await res.json();
   const random = data[Math.floor(Math.random() * data.length)];
@@ -6,7 +8,9 @@ async function fetchQuote() {
   document.getElementById("author").textContent = random.author
     ? `— ${random.author}`
     : "— Unknown";
+  setTimeout(() => box.classList.add("loaded"), 100); // slight delay
 }
+
 
 function copyQuote() {
   const quote = document.getElementById("quote").textContent;
