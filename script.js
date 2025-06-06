@@ -1,5 +1,5 @@
 async function fetchQuote() {
-  const res = await fetch("https://type.fit/api/quotes");
+  const res = await fetch("quotes.json");
   const data = await res.json();
   const random = data[Math.floor(Math.random() * data.length)];
   document.getElementById("quote").textContent = `"${random.text}"`;
@@ -7,7 +7,6 @@ async function fetchQuote() {
     ? `— ${random.author}`
     : "— Unknown";
 }
-
 
 function copyQuote() {
   const quote = document.getElementById("quote").textContent;
