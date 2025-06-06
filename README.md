@@ -13,4 +13,4 @@ A minimalist widget that fetches and displays a new quote every time you click a
 3. Or host it with GitHub Pages for public use
 
 ### Screenshot
-![screenshot](screenshot.png)
+![image](https://github.com/user-attachments/assets/3f362453-322e-4676-9be4-9cac02e63473)
