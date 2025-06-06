@@ -20,7 +20,13 @@ function copyQuote() {
 }
 
 function toggleDarkMode() {
-  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.toggle("dark");
+  localStorage.setItem("darkMode", isDark);
+}
+
+// On load
+if (localStorage.getItem("darkMode") === "true") {
+  document.body.classList.add("dark");
 }
 
 fetchQuote();
